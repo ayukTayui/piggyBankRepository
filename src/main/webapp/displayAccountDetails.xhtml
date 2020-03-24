@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>account details</title>
+    </h:head>
+    <h:body>
+
+
+
+        <h:form>
+            <div align="center">
+                <h3 align="center" style="background-color: aquamarine">The Piggy Bank</h3>
+                <p><i><bold><marquee> ... This is the place where all of your banking dreams become a reality ... </marquee></bold></i></p>
+
+                <h3>Here Are your account details</h3>
+                <h:dataTable border="3" value="#{transactions.account}">
+                    <h:column>
+                        <f:facet name="header" > Account Number</f:facet>
+                            #{transactions.account.accountNumber}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header" > Account Type</f:facet>
+                            #{transactions.account.accountType}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header" > Account Balance</f:facet>
+                            #{transactions.account.balance}
+                    </h:column>
+                    
+                </h:dataTable>
+                <br/>
+                <hr/>
+                <h:commandButton value="CLICK HERE TO RETURN TO MAIN PAGE" action="customerMenu.xhtml"/>
+
+            </div>  
+        </h:form>
+
+    </h:body>
+</html>
+

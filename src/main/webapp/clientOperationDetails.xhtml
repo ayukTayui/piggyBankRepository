@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>client transaction details</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div align="center">
+                <h3 align="center" style="background-color: aquamarine">The Piggy Bank</h3>
+                <p><i><bold><marquee> ... This is the place where all of your banking dreams become a reality ... </marquee></bold></i></p>
+                <h5>Mini Statement</h5>
+                <h:dataTable border="3" value="#{transactions.trans}">
+                
+                <h:column>
+                <f:facet name="header" > Transaction Id</f:facet>
+                #{transactions.trans.transactionId}
+                </h:column>    
+                
+                
+                  <h:column>
+                <f:facet name="header" > Account Number</f:facet>
+                #{transactions.account.accountNumber}
+                </h:column>
+                      
+                    
+                <h:column>
+                <f:facet name="header" > Amount</f:facet>
+                #{transactions.trans.amount}
+                </h:column>
+            
+                  <h:column>
+                <f:facet name="header" >Current Balance</f:facet>
+                #{transactions.account.balance}
+                </h:column>
+                
+                 <h:column>
+                <f:facet name="header" > Transaction Date and Time</f:facet>
+                #{transactions.trans.dateTime}
+                </h:column>
+                    <h:column>
+                <f:facet name="header" > Transaction Reference</f:facet>
+                #{transactions.trans.references}
+                </h:column>
+                        
+            </h:dataTable>
+            <br/>
+            <h:commandButton value="Click Here For Client Operations" action="customerMenu.xhtml"/>
+            
+            </div>
+        </h:form>
+    </h:body>
+</html>
+

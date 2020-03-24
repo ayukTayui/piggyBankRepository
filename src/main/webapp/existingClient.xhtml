@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>create other accounts</title>
+    </h:head>
+    <h:body>
+        <h:form>
+         <h3 align="center" style="background: aquamarine">Existing Customer Create Another Account</h3>
+            <p><i><bold><marquee> ... This is the place where all of your banking dreams become a reality ... </marquee></bold></i></p>
+                <div align="center">
+                <label>account balance</label>
+                <br/>
+                <h:inputText value="#{customer.balance}" required="true"/>
+                <br/>
+                <label>account type</label>
+                <br/>
+                <h:inputText value="#{customer.accountType}" required="true"/>
+                <br/>
+                <label>account status</label>
+                <br/>
+                <h:inputText value="#{customer.accountStatus}" required="true"/>
+                <br/>
+                <label>card type</label>
+                <br/>
+                <h:inputText value="#{customer.cardType}" required="true"/>
+                <br/>
+                <label>card pin</label>
+                <br/>
+                <h:inputText value="#{customer.pin}" required="true"/>
+                <br/>
+                <label>card status</label>
+                <br/>
+                <h:inputText value="#{customer.cardStatus}" required="true"/>
+                <br/>
+                <h:commandButton value="Register" action="#{customer.createOtherAccounts()}"/>
+                </div>
+                
+            </h:form>
+    </h:body>
+</html>
+

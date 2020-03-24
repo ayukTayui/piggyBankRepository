@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title> withdraw page </title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+            <div align="center">
+                <h3 style="background-color: aqua">Hello World And Welcome To The Piggy Bank</h3>
+                <br/>
+                <marquee><q>.... this is the place where your wealth is multiplied and secured ...</q></marquee>
+                <label>Account Number</label>
+                <br/>
+                <h:inputText value="#{transactions.accountNumber}" required="true"/>
+                <br/>
+                <label>  Amount </label>
+                <br/>
+                <h:inputText value="#{transactions.amount}" required="true"/>
+                <br/>
+                <label>Reference</label>
+                <br/>
+                <h:inputText value="#{transactions.references}" required="true"/>
+                <br/>
+                <h:commandButton value="Withdraw Here" action="#{transactions.withdrawCash(transactions)}"/>
+                <br/>
+                <hr/>
+                <h:commandButton value="CLICK HERE TO RETURN TO MAIN PAGE" action="index.xhtml"/>
+
+            </div>
+           
+        </h:form>
+
+    </h:body>
+</html>
+
